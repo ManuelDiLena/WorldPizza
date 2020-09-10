@@ -43,14 +43,26 @@ var form = document.getElementById("form");
     function validate(e) {
         var inputName = document.getElementById("name"),
             inputEmail = document.getElementById("email"),
-            inputComments = document.getElementById("comments");
+            inputComments = document.getElementById("comments"),
+            alertSuccess = document.getElementById("alertSuccess"),
+            alertError = document.getElementById("alertError");
 
         if (inputName.value == 0 || inputEmail.value == 0 || inputComments.value == 0) {
-            //e.preventDeFault();
-            alert("Datos vacíos");
+            e.preventDefault();
+            alertError.classList.remove("hide");
+            alertError.classList.add("show");
+            setTimeout(function() {
+                alertError.classList.remove("show");
+                alertError.classList.add("hide");
+            }, 2000);
         }else {
-            //e.preventDeFault();
-            alert("Datos enviados");
+            e.preventDefault();
+            alertSuccess.classList.remove("hide");
+            alertSuccess.classList.add("show");
+            setTimeout(function() {
+                alertSuccess.classList.remove("show");
+                alertSuccess.classList.add("hide");
+            }, 2000);
             inputName.value = "";
             inputEmail.value = "";
             inputComments.value = "";
