@@ -72,3 +72,37 @@ var form = document.getElementById("form");
 
 // Form events
 form.addEventListener("submit", validate);
+
+// Scroll Top Button
+var btnTop = document.getElementById("btn-top"),
+    logo = document.getElementById("logo");
+
+// We detected scroll on our page
+window.addEventListener("scroll", function() {
+    var scroll = document.documentElement.scrollTop,
+        fullSize = document.documentElement.offsetHeight,
+        sizeVP = document.documentElement.clientHeight;
+
+    if (scroll > 100) {
+        btnTop.classList.add("show");
+    }else {
+        btnTop.classList.remove("show");
+    }
+
+    // Modify element when it reaches the bottom of the page
+    if (fullSize == (scroll + sizeVP)) {
+        btnTop.classList.add("finalscroll");
+    } else {
+        btnTop.classList.remove("finalscroll");
+    }
+});
+
+// Button click event
+btnTop.addEventListener("click", function() {
+    window.scrollTo(0,0);
+});
+
+// Logo click event
+logo.addEventListener("click", function() {
+    window.scrollTo(0,0);
+});

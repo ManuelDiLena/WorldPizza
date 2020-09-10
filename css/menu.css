@@ -75,7 +75,7 @@
 /* Footer Section */
 footer {
     display: flex;
-    margin-top: -80px;
+    margin-top: -100px;
 }
 
 .social-method {
@@ -120,6 +120,45 @@ footer {
 
 .social-method i:hover {
     transform: translateY(-20px);
+}
+
+/* Go up Button */
+#btn-top {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(200%);
+    transition: all 0.5s;
+}
+
+#btn-top.show {
+    transform: translateY(0);
+}
+
+#btn-top.finalscroll {
+    transform: translateY(-230%);
+}
+
+#btn-top span {
+    color: #ffffff;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s;
+}
+
+#btn-top:hover {
+    background: #d89127;
+}
+
+#btn-top:hover span {
+    transform: translateY(-3px);
 }
 
 
@@ -177,6 +216,10 @@ footer {
 
     .social-method {
         width: 50%;
+    }
+
+    #btn-top {
+        display: none;
     }
 } 
 
