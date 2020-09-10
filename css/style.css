@@ -1,0 +1,59 @@
+/* Variables */
+:root {
+    --primary-color: #fcb03b;
+    --sedundary-color: #e92f3b;
+    --background-color: #eff6f5;
+    --text-color: #a1a5a6;
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+}
+
+.titles {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.subtitles {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    font-weight: 700;
+    padding: 15px 30px;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    transition: all 0.3s;
+}
+
+.btn span {
+    padding-left: 10px;
+}
+
+.btn:hover {
+    padding: 15px 45px;
+}
