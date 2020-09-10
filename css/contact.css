@@ -91,3 +91,18 @@
 .btn-input:hover {
     padding: 15px 65px;
 } 
+
+
+@media screen and (max-width: 650px) {
+    #form {
+        width: 100%;
+    }
+
+    .two-fields {
+        flex-direction: column;
+    }
+
+    .input-icon {
+        width: 100%;
+    }
+} 
