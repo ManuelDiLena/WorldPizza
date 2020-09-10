@@ -98,4 +98,18 @@
     text-align: center;
     font-style: italic;
     padding: 0 20px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .services-wrapper {
+        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "ingredients     speed"
+                             "quality         delivery";
+    }
+
+    .central-image {
+        display: none;
+    }
 } 
