@@ -19,3 +19,18 @@ var btnMenuOpen = document.getElementById("btnMenuOpen"),
         menuResponsive.style.transitionDelay = "0.5s";
         menuResponsive.classList.remove("active");
     });
+
+//Products Slider
+var wrapper = document.querySelector('.slider'),
+    btnLeft = document.getElementById("btnLeft"),
+    btnRight = document.getElementById("btnRight");
+
+    //Event for the right button
+    btnRight.addEventListener("click", function() {
+        wrapper.scrollLeft += wrapper.offsetWidth;
+    });
+
+    //Event for the left button
+    btnLeft.addEventListener("click", function() {
+        wrapper.scrollLeft -= wrapper.offsetWidth;
+    });
